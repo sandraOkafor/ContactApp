@@ -1,0 +1,26 @@
+/* 
+    Created on : 23-Feb-2019, 10:17:53
+    Author     : Nneka Okafor
+*/
+body {
+    background-color: gray;
+    background-image: url('Images/people.jpg');
+    background-repeat: repeat;
+}
+
+h1 {
+    color: red;
+    font-family: Algerian;
+    font-size: 15pt;
+}
+
+nav a:hover { 
+    color: pink; 
+} 
+
+nav a{
+display: inline;
+text-decoration: none;
+color:white;
+}
+
