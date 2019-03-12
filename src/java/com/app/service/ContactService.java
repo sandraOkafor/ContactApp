@@ -24,22 +24,13 @@ public class ContactService {
       session.save(c);
     }
 
-    public void viewContacts() {
-    final Session session = sessionFactory.getCurrentSession();
+    public List<Contacts> viewContacts() {
+        final Session session = sessionFactory.getCurrentSession();
     
-      final List<Contacts> cList = session.createQuery("FROM Contacts").list();
-      for (Contacts c : cList) {
-       c.getId();
-       c.getTitle();
-       c.getFirstName();
-       c.getLastName();
-       c.getGender();
-       c.getPhone();
-       c.getAddress();
-       c.getAddy();
-       c.getBirthDate();
-       c.getRship();
+        final List<Contacts> cList = session.createQuery("FROM Contacts").list();
+        return cList;
+            
       }
      
   }
-}
+

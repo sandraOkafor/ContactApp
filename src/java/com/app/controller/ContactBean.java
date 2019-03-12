@@ -2,6 +2,8 @@ package com.app.controller;
 
 import com.app.model.Contacts;
 import com.app.service.ContactService;
+import java.util.ArrayList;
+import java.util.List;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,12 +35,10 @@ public class ContactBean {
       return "Success";
     }
     
-    public String viewContact() {
-        Contacts c = new Contacts(title, firstName, lastName, gender, phone, address, addy, birthDate, rship);
-        cs.viewContacts();
-        return "ViewContacts";
+    public List<Contacts> findAll(){
+        return cs.viewContacts();
     }
-
+    
     public String getTitle() {
       return title;
     }
@@ -101,4 +101,6 @@ public class ContactBean {
     public void setRship(String rship) {
       this.rship = rship;
     }
+    
+    
 }

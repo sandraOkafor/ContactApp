@@ -14,15 +14,13 @@
             <div style="width: 100%;  margin-top: 100px; margin-left: 0px; margin-right:auto"></div>
             <div id="topnav" style="float:left; width: 100%; height: 40px; word-spacing: 5px; font-size: 90%; padding-left:60px; padding-top: 30px; white-space: nowrap; text-align:left; background-color: #00bfff;">
 				
-                    <f:view>
-                        <h:form>
-                            <h:commandLink value="Create Contact" action="createContact"></h:commandLink>
-                            <h:commandLink value="Edit/Delete Contacts" action="EditContact"></h:commandLink>
-                            <h:commandLink value="View all Contacts" action="ViewContacts"></h:commandLink>
-                            <h:commandLink value="Contacts Groups" action="ContactsGroups"></h:commandLink>
-                        </h:form>
-                    </f:view>
-		 
+                    <nav>			
+                    <a href="CreateContact.xhtml">Create Contact</a> |
+                    <a href="EditContact.xhtml">Edit/Delete Contacts</a> |
+                    <a href="ViewContacts.xhtml">View all Contacts</a> |
+                    <a href="ContactGroups.xhtml">Contacts Groups</a> |
+		</nav>   
+           		 
             </div>
             
             
@@ -54,7 +52,7 @@
                     <h:inputText value="#{contactBean.birthDate}" /> <br /> <br />
                     <h:outputLabel value="Relationship:" />
                     <h:selectOneMenu id ="rship" value="select rship" title="rship">
-                        <f:selectItem id ="`famID" itemLabel="Family" itemValue="01"></f:selectItem>
+                        <f:selectItem id ="famID" itemLabel="Family" itemValue="01"></f:selectItem>
                         <f:selectItem id ="frdID" itemLabel="Friends" itemValue="02"></f:selectItem>
                         <f:selectItem id ="collID" itemLabel="Colleagues" itemValue="03"></f:selectItem>
                     </h:selectOneMenu> <br /> <br />

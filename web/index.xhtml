@@ -19,7 +19,7 @@
                         <h:form>
                             <h:commandLink value="Create Contact" action="createContact"></h:commandLink>
                             <h:commandLink value="Edit/Delete Contacts" action="EditContact"></h:commandLink>
-                            <h:commandLink value="View all Contacts" action="ViewContacts"></h:commandLink>
+                            <h:commandLink value="View all Contacts" action="#{contactBean.addContact}"></h:commandLink>
                             <h:commandLink value="Contacts Groups" action="ContactsGroups></h:commandLink>
                         </h:form>
                     </f:view>
