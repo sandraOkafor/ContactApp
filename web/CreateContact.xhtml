@@ -12,7 +12,7 @@
 <!--        <div id="mainDiv" style="position: relative; width: 100%; height: auto; margin-top: 10px; margin-bottom: 0px;">-->
 
             <div style="width: 100%;  margin-top: 100px; margin-left: 0px; margin-right:auto"></div>
-            <div id="topnav" style="float:left; width: 100%; height: 40px; word-spacing: 5px; font-size: 90%; padding-left:60px; padding-top: 30px; white-space: nowrap; text-align:left; background-color: #00bfff;">
+            <div id="topnav" style="float:left; width: 100%; height: 40px; word-spacing: 3px; font-size: 90%; padding-left:60px; padding-top: 30px; white-space: nowrap; text-align:left; background-color: #00bfff;">
 				
                     <nav>			
                     <a href="CreateContact.xhtml">Create Contact</a> |
@@ -28,19 +28,19 @@
                 <h:form id="form">
                     <h3>Contact Information</h3>
                     <h:outputLabel style="width:100px" value="Title:" />
-                    <h:selectOneMenu id ="ttl" value="select title" title="title">
-                        <f:selectItem id ="missID" itemLabel="Ms" itemValue="01"></f:selectItem>
-                        <f:selectItem id ="mrID" itemLabel="Mr" itemValue="02"></f:selectItem>
-                        <f:selectItem id ="mrsID" itemLabel="Mrs" itemValue="03"></f:selectItem>
+                    <h:selectOneMenu id ="ttl" value="#{contactBean.title}" title="title">
+                        <f:selectItem id ="missID" itemLabel="Ms" itemValue="Miss"></f:selectItem>
+                        <f:selectItem id ="mrID" itemLabel="Mr" itemValue="Mr"></f:selectItem>
+                        <f:selectItem id ="mrsID" itemLabel="Mrs" itemValue="Mrs"></f:selectItem>
                     </h:selectOneMenu> <br /> <br />
                     <h:outputLabel value="First Name:" />
                     <h:inputText value="#{contactBean.firstName}" /> <br /> <br />
                     <h:outputLabel value="Last Name:" />
                     <h:inputText value="#{contactBean.lastName}" /> <br /> <br />
                     <h:outputLabel value="Gender:" />
-                    <h:selectOneMenu id ="gender" value="select gender" title="gender">
-                        <f:selectItem id ="mID" itemLabel="Male" itemValue="01"></f:selectItem>
-                        <f:selectItem id ="fID" itemLabel="Female" itemValue="02"></f:selectItem>
+                    <h:selectOneMenu id ="gender" value="#{contactBean.gender}" title="gender">
+                        <f:selectItem id ="mID" itemLabel="Male" itemValue="Male"></f:selectItem>
+                        <f:selectItem id ="fID" itemLabel="Female" itemValue="Female"></f:selectItem>
                     </h:selectOneMenu> <br /> <br />
                     <h:outputLabel value="Phone Number:" />
                     <h:inputText value="#{contactBean.phone}" /> <br /> <br />
@@ -51,10 +51,10 @@
                     <h:outputLabel value="Birthday:" />
                     <h:inputText value="#{contactBean.birthDate}" /> <br /> <br />
                     <h:outputLabel value="Relationship:" />
-                    <h:selectOneMenu id ="rship" value="select rship" title="rship">
-                        <f:selectItem id ="famID" itemLabel="Family" itemValue="01"></f:selectItem>
-                        <f:selectItem id ="frdID" itemLabel="Friends" itemValue="02"></f:selectItem>
-                        <f:selectItem id ="collID" itemLabel="Colleagues" itemValue="03"></f:selectItem>
+                    <h:selectOneMenu id ="rship" value="#{contactBean.rship}" title="rship">
+                        <f:selectItem id ="famID" itemLabel="Family" itemValue="Family"></f:selectItem>
+                        <f:selectItem id ="frdID" itemLabel="Friends" itemValue="Friends"></f:selectItem>
+                        <f:selectItem id ="collID" itemLabel="Colleagues" itemValue="Colleagues"></f:selectItem>
                     </h:selectOneMenu> <br /> <br />
                     <h:commandButton action="#{contactBean.addContact}" value ="SUBMIT"></h:commandButton>
                     

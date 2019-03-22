@@ -22,116 +22,92 @@
             </div>
 
                         <h:form>
-                            <h1><h:outputText value="List"/></h1>
-                            <h:dataTable value="#{contactBean.findAll()}" var="Contacts">
+                            <h1><h:outputText value="Contact List"/></h1>
+                            
+                            <h:dataTable value="#{contactBean.findAll()}" var="Contacts" 
+                                styleClass = "contactTable"
+                                headerClass = "contactTableHeader"
+                                rowClasses = "contactTableOddRow, contactTableEvenRow"
+                                
+                                >
+                                
                                 <h:column>
-                                    <f:facet name="header">
-                                        <h:outputText value="Id"/>
-                                    </f:facet>
+                                    <f:facet name="header">ID</f:facet>
+                                    
                                     <h:outputText value="#{Contacts.id}"/>
                                 </h:column>
+                                
                                 <h:column>
                                     <f:facet name="header">
-                                        <h:outputText value="Title"/>
+                                        Title
                                     </f:facet>
+                                    
                                     <h:outputText value="#{Contacts.title}"/>
                                 </h:column>
+                                
                                 <h:column>
                                     <f:facet name="header">
-                                        <h:outputText value="FirstName"/>
+                                        First Name
                                     </f:facet>
+                                    
                                     <h:outputText value="#{Contacts.firstName}"/>
                                 </h:column>
+                                
                                 <h:column>
                                     <f:facet name="header">
-                                        <h:outputText value="LastName"/>
+                                        Last Name
                                     </f:facet>
                                     <h:outputText value="#{Contacts.lastName}"/>
                                 </h:column>
+                                
                                 <h:column>
                                     <f:facet name="header">
-                                        <h:outputText value="Gender"/>
+                                        Gender
                                     </f:facet>
                                     <h:outputText value="#{Contacts.gender}"/>
                                 </h:column>
                                 <h:column>
                                     <f:facet name="header">
-                                        <h:outputText value="Phone"/>
+                                        Phone
                                     </f:facet>
                                     <h:outputText value="#{Contacts.phone}"/>
                                 </h:column>
                                 <h:column>
                                     <f:facet name="header">
-                                        <h:outputText value="Address"/>
+                                        Contact Address
                                     </f:facet>
                                     <h:outputText value="#{Contacts.address}"/>
                                 </h:column>
                                 <h:column>
                                     <f:facet name="header">
-                                        <h:outputText value="Addy"/>
+                                        Email Addy
                                     </f:facet>
                                     <h:outputText value="#{Contacts.addy}"/>
                                 </h:column>
                                 <h:column>
-                                    <f:facet name="header">
-                                        <h:outputText value="BirthDate"/>
-                                    </f:facet>
+                                    <f:facet name="header">Birth Date</f:facet>
                                     <h:outputText value="#{Contacts.birthDate}"/>
                                 </h:column>
+                                
                                 <h:column>
-                                    <f:facet name="header">
-                                        <h:outputText value="Rship"/>
-                                    </f:facet>
+                                    <f:facet name="header">Relationship</f:facet>
                                     <h:outputText value="#{Contacts.rship}"/>
                                 </h:column>
+                                
+                                <h:column>
+                                    <f:facet name="header">Edit</f:facet>
+                                    <h:commandButton value="Edit" action="#{ContactBean.edit}"/>
+                                </h:column>
+                                
+                                
                             </h:dataTable>
                         </h:form>
+            <br/>
+            
+             
+            
 
                  
 
-                
-<!--            <h:dataTable value = "#{ContactBean.findAll}" var = "Contacts"
-                styleClass = "contactTable"
-                headerClass = "contactTableHeader"
-                rowClasses = "contactTableOddRow,contactTableEvenRow">
-
-                <h:column>    				
-                   <f:facet name = "header">Name</f:facet>    				
-                   #{Contacts.name}
-                </h:column>
-
-                <h:column>
-                   <f:facet name = "header">Department</f:facet>
-                   #{Contacts.department}
-                </h:column>
-
-                <h:column>
-                   <f:facet name = "header">Age</f:facet>
-                   #{Contacts.age}
-                </h:column>
-
-                <h:column>
-                   <f:facet name = "header">Salary</f:facet>
-                   #{employee.salary}
-                </h:column>
-            </h:dataTable>
-            
-            
-        
-            -->
-            
-<!--            for (Contacts c : cList) {
-       c.getId();
-       c.getTitle();
-       c.getFirstName();
-       c.getLastName();
-       c.getGender();
-       c.getPhone();
-       c.getAddress();
-       c.getAddy();
-       c.getBirthDate();
-       c.getRship();
-      }-->
     </h:body>
 </html>
-
