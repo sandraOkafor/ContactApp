@@ -16,8 +16,8 @@ public class ContactService {
 
     @Autowired
     private SessionFactory sessionFactory;
-    
-    
+    private Contacts c;
+        
 
     public void addContact(Contacts c) {
       final Session session = sessionFactory.getCurrentSession();
@@ -30,7 +30,12 @@ public class ContactService {
         final List<Contacts> cList = session.createQuery("FROM Contacts").list();
         return cList;
             
-      }
-     
+    }
+
+   public void delete(){
+       viewContacts().remove(c);
+   }
+   
+    
   }
 

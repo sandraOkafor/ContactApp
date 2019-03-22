@@ -43,6 +43,8 @@ public class Contacts implements Serializable {
     
     @Column(name = "relationship")
     private String rship;
+    
+    private boolean canEdit;
 
     public Contacts() {
     }
@@ -59,7 +61,8 @@ public class Contacts implements Serializable {
         this.rship = rship;
      
     }
-
+    
+  
     public int getId() {
       return id;
     }
@@ -119,6 +122,7 @@ public class Contacts implements Serializable {
     public String getBirthDate() {
       return birthDate;
     }
+    
     public void setBirthDate(String birthDate) {
       this.birthDate = birthDate;
     }
@@ -126,6 +130,7 @@ public class Contacts implements Serializable {
     public String getRship() {
       return rship;
     }
+    
     public void setRship(String rship) {
       this.rship = rship;
     }

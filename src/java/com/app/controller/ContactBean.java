@@ -2,13 +2,14 @@ package com.app.controller;
 
 import com.app.model.Contacts;
 import com.app.service.ContactService;
-import java.util.ArrayList;
+import java.io.Serializable;
 import java.util.List;
+import javax.annotation.ManagedBean;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@Named
+@ManagedBean
 @RequestScoped
 public class ContactBean {
     
@@ -24,7 +25,8 @@ public class ContactBean {
     private String addy;
     private String birthDate;
     private String rship;
-
+    
+    
     public String addContact() {
       if (firstName.isEmpty() || phone.isEmpty()) {
         return "error";
@@ -39,6 +41,22 @@ public class ContactBean {
         return cs.viewContacts();
     }
     
+    public String edit() {
+        return "EditContact";
+    }
+    
+//    public void update() {
+//        c=new Contacts();
+//    }
+//    
+//    public void delete(){
+//        
+//    }
+//    public String editContact() {
+//        
+//    }
+    
+      
     public String getTitle() {
       return title;
     }
