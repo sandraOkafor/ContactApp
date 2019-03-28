@@ -1,6 +1,7 @@
 package com.app.service;
 
 import com.app.model.Contacts;
+import com.app.model.Users;
 import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -17,11 +18,13 @@ public class ContactService {
     @Autowired
     private SessionFactory sessionFactory;
     private Contacts c;
+    private Users user;
         
 
-    public void addContact(Contacts c) {
+    public void addContact(Object us) {
       final Session session = sessionFactory.getCurrentSession();
-      session.save(c);
+      us = session.get(Contacts.class, user);
+      session.save(us);
     }
 
     public List<Contacts> viewContacts() {
@@ -31,8 +34,25 @@ public class ContactService {
         return cList;
             
     }
+    
+    public void save(Integer id, String title, String firstName, String lastName, String gender, String phone, String address, String addy, String birthDate, String rship) {
+        final Session session = sessionFactory.getCurrentSession();
+        Contacts con = (Contacts) session.get(Contacts.class, id);
+        con.setTitle(title);
+        con.setFirstName(firstName);
+        con.setLastName(lastName);
+        con.setGender(gender);
+        con.setPhone(phone);
+        con.setAddress(address);
+        con.setAddy(addy);
+        con.setBirthDate(birthDate);
+        con.setRship(rship);
+        session.update(con);
+    }
+    
 
    public void delete(){
+       c= new Contacts();
        viewContacts().remove(c);
    }
    

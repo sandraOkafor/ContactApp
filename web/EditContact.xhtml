@@ -21,7 +21,95 @@
 		</nav>   
             </div>
             
-            
+           <h:form>
+                            <h1><h:outputText value="Contact List"/></h1>
+                            
+                            <h:dataTable value="#{contactBean.findAll()}" var="Contacts" 
+                                styleClass = "contactTable"
+                                headerClass = "contactTableHeader"
+                                rowClasses = "contactTableOddRow, contactTableEvenRow"
+                                
+                                >
+                                
+                                <h:column>
+                                    <f:facet name="header">ID</f:facet>
+                                    
+                                    <h:outputText value="#{Contacts.contactID}"/>
+                                </h:column>
+                                
+                                <h:column>
+                                    <f:facet name="header">
+                                        Title
+                                    </f:facet>
+                                    
+                                    <h:inputText size="5" value="#{Contacts.title}"/>
+                                </h:column>
+                                
+                                <h:column>
+                                    <f:facet name="header">
+                                        First Name
+                                    </f:facet>
+                                    
+                                    <h:inputText size="8" value="#{Contacts.firstName}"/>
+                                </h:column>
+                                
+                                <h:column>
+                                    <f:facet name="header">
+                                        Last Name
+                                    </f:facet>
+                                    <h:inputText size="8" value="#{Contacts.lastName}"/>
+                                </h:column>
+                                
+                                <h:column>
+                                    <f:facet name="header">
+                                        Gender
+                                    </f:facet>
+                                    <h:inputText size="5" value="#{Contacts.gender}"/>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Phone
+                                    </f:facet>
+                                    <h:inputText size="8" value="#{Contacts.phone}"/>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Contact Address
+                                    </f:facet>
+                                    <h:inputText value="#{Contacts.address}"/>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Email Addy
+                                    </f:facet>
+                                    <h:inputText value="#{Contacts.addy}"/>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Birth Date</f:facet>
+                                    <h:inputText value="#{Contacts.birthDate}"/>
+                                </h:column>
+                                
+                                <h:column>
+                                    <f:facet name="header">Relationship</f:facet>
+                                    <h:inputText size="8" value="#{Contacts.rship}"/>
+                                </h:column>
+                                
+                                <h:column>
+                                    <f:facet name="header">Save</f:facet>
+                                    <h:commandButton value="Save" action = "#{ContactBean.save}">        
+                                  <f:setPropertyActionListener 
+                                  target = "#{ContactBean.c}" value = "#{c}" />
+                                  </h:commandButton>
+                                </h:column>
+                                
+                                <h:column>
+                                    <f:facet name="header">Delete</f:facet>
+                                    <h:commandButton value="Delete" action = "#{ContactBean.delete}">        
+                                </h:commandButton>
+                                </h:column>
+                                
+                            </h:dataTable>
+                        </h:form> 
             
     </h:body>
 </html>

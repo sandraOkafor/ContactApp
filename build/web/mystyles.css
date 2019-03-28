@@ -24,3 +24,26 @@ text-decoration: none;
 color:white;
 }
 
+.contactTable {   
+   border-collapse:collapse;
+   border:1px solid #000000;
+   
+}
+
+.contactTableHeader {
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   border-bottom:1px solid #000000;  
+   padding:2px;
+}
+
+.contactTableOddRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #FFFFFF;	
+}
+
+.contactTableEvenRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #D3D3D3;
+}
+

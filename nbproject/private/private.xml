@@ -3,14 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Nneka%20Okafor/Documents/NetBeansProjects/ContactsSafe/src/java/com/app/session/MySession.java</file>
+            <file>file:/C:/Users/Nneka%20Okafor/Documents/NetBeansProjects/ContactsSafe/src/java/com/app/model/Users.java</file>
             <file>file:/C:/Users/Nneka%20Okafor/Documents/NetBeansProjects/ContactsSafe/src/java/com/app/model/Contacts.java</file>
             <file>file:/C:/Users/Nneka%20Okafor/Documents/NetBeansProjects/ContactsSafe/web/ViewContacts.xhtml</file>
             <file>file:/C:/Users/Nneka%20Okafor/Documents/NetBeansProjects/ContactsSafe/src/java/com/app/controller/ContactBean.java</file>
-            <file>file:/C:/Users/Nneka%20Okafor/Documents/NetBeansProjects/ContactsSafe/web/Success.xhtml</file>
-            <file>file:/C:/Users/Nneka%20Okafor/Documents/NetBeansProjects/ContactsSafe/web/EditContact.xhtml</file>
-            <file>file:/C:/Users/Nneka%20Okafor/Documents/NetBeansProjects/ContactsSafe/web/mystyles.css</file>
-            <file>file:/C:/Users/Nneka%20Okafor/Documents/NetBeansProjects/ContactsSafe/web/index.xhtml</file>
+            <file>file:/C:/Users/Nneka%20Okafor/Documents/NetBeansProjects/ContactsSafe/web/Register.xhtml</file>
+            <file>file:/C:/Users/Nneka%20Okafor/Documents/NetBeansProjects/ContactsSafe/web/Login.xhtml</file>
             <file>file:/C:/Users/Nneka%20Okafor/Documents/NetBeansProjects/ContactsSafe/src/java/com/app/service/ContactService.java</file>
+            <file>file:/C:/Users/Nneka%20Okafor/Documents/NetBeansProjects/ContactsSafe/web/CreateContact.xhtml</file>
+            <file>file:/C:/Users/Nneka%20Okafor/Documents/NetBeansProjects/ContactsSafe/src/java/com/app/controller/UsersBean.java</file>
         </group>
     </open-files>
 </project-private>

@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,42 +16,45 @@ public class Contacts implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private int id;
+    @Column(name = "contact_id")
+    private int contactID;
     
-    @Column(name = "title")
+    @Column(name = "title", nullable = false)
     private String title;
 
-    @Column(name = "first_name")
+    @Column(name = "first_name", nullable = false)
     private String firstName;
     
-    @Column(name = "last_name")
+    @Column(name = "last_name", nullable = false)
     private String lastName;
     
-    @Column(name = "gender")
+    @Column(name = "gender", nullable = false)
     private String gender;
     
-    @Column(name = "phone_no")
+    @Column(name = "phone_no", nullable = false)
     private String phone;
     
-    @Column(name = "address")
+    @Column(name = "address", nullable = false)
     private String address;
     
-    @Column(name = "email_address")
+    @Column(name = "email_address", nullable = false)
     private String addy;
 
-    @Column(name = "birth_date")
+    @Column(name = "birth_date", nullable = false)
     private String birthDate;
     
-    @Column(name = "relationship")
+    @Column(name = "relationship", nullable = false)
     private String rship;
     
-    private boolean canEdit;
+//    @ManyToOne
+//    @JoinColumn(name="userID")
+//    private Users user;
 
     public Contacts() {
     }
 
     public Contacts(String title, String firstName, String lastName, String gender, String phone, String address, String addy, String birthDate, String rship) {
+//        this.user=user;
         this.title = title;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -63,11 +68,11 @@ public class Contacts implements Serializable {
     }
     
   
-    public int getId() {
-      return id;
+    public int getContactID() {
+      return contactID;
     }
-    public void setId(int id) {
-      this.id = id;
+    public void setContactID(int contactID) {
+      this.contactID = contactID;
     }
 
     public String getTitle() {
@@ -134,5 +139,13 @@ public class Contacts implements Serializable {
     public void setRship(String rship) {
       this.rship = rship;
     }
+    
+//    public Users getUser() {
+//      return user;
+//    }
+//    
+//    public void setUser(Users user) {
+//      this.user = user;
+//    }
 
 }

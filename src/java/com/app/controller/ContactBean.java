@@ -1,6 +1,7 @@
 package com.app.controller;
 
 import com.app.model.Contacts;
+import com.app.model.Users;
 import com.app.service.ContactService;
 import java.io.Serializable;
 import java.util.List;
@@ -9,13 +10,15 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@ManagedBean
+@Named
 @RequestScoped
 public class ContactBean {
     
     @Autowired
     private ContactService cs;
 
+//    private Users user;
+    private Integer id;
     private String title;
     private String firstName;
     private String lastName;
@@ -25,15 +28,16 @@ public class ContactBean {
     private String addy;
     private String birthDate;
     private String rship;
+    private Object us;
     
     
     public String addContact() {
-      if (firstName.isEmpty() || phone.isEmpty()) {
+      if (firstName.isEmpty() || phone.isEmpty()) {     //extend to all fields
         return "error";
       }
 
-      Contacts c = new Contacts(title, firstName, lastName, gender, phone, address, addy, birthDate, rship);
-      cs.addContact(c);
+      Contacts c = new Contacts( title, firstName, lastName, gender, phone, address, addy, birthDate, rship);
+      cs.addContact(us);
       return "Success";
     }
     
@@ -41,7 +45,8 @@ public class ContactBean {
         return cs.viewContacts();
     }
     
-    public String edit() {
+    public String save() {
+        cs.save(id, title, firstName, lastName, gender, phone, address, addy, birthDate, rship);
         return "EditContact";
     }
     
@@ -49,9 +54,9 @@ public class ContactBean {
 //        c=new Contacts();
 //    }
 //    
-//    public void delete(){
-//        
-//    }
+    public void delete(){
+        cs.delete();
+    }
 //    public String editContact() {
 //        
 //    }

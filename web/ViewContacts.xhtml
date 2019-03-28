@@ -34,7 +34,7 @@
                                 <h:column>
                                     <f:facet name="header">ID</f:facet>
                                     
-                                    <h:outputText value="#{Contacts.id}"/>
+                                    <h:outputText value="#{Contacts.contactID}"/>
                                 </h:column>
                                 
                                 <h:column>
@@ -94,17 +94,13 @@
                                     <h:outputText value="#{Contacts.rship}"/>
                                 </h:column>
                                 
-                                <h:column>
-                                    <f:facet name="header">Edit</f:facet>
-                                    <h:commandButton value="Edit" action="#{ContactBean.edit}"/>
-                                </h:column>
-                                
                                 
                             </h:dataTable>
                         </h:form>
-            <br/>
+            <br/>  <br/>  <br/>
             
-             
+            
+             <h:commandButton value="Edit" action="EditContact.xhtml"/>
             
 
                  
