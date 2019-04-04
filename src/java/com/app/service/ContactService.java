@@ -21,10 +21,10 @@ public class ContactService {
     private Users user;
         
 
-    public void addContact(Object us) {
+    public void addContact(Contacts c) {
       final Session session = sessionFactory.getCurrentSession();
-      us = session.get(Contacts.class, user);
-      session.save(us);
+      
+      session.save(c);
     }
 
     public List<Contacts> viewContacts() {
@@ -49,11 +49,13 @@ public class ContactService {
         con.setRship(rship);
         session.update(con);
     }
+
     
 
-   public void delete(){
-       c= new Contacts();
+   public String delete(){
+       Contacts c= new Contacts();
        viewContacts().remove(c);
+       return null;
    }
    
     

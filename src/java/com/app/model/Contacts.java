@@ -46,9 +46,9 @@ public class Contacts implements Serializable {
     @Column(name = "relationship", nullable = false)
     private String rship;
     
-//    @ManyToOne
-//    @JoinColumn(name="userID")
-//    private Users user;
+    @ManyToOne
+    @JoinColumn(name="userID")
+    private Users user;
 
     public Contacts() {
     }
@@ -140,12 +140,12 @@ public class Contacts implements Serializable {
       this.rship = rship;
     }
     
-//    public Users getUser() {
-//      return user;
-//    }
-//    
-//    public void setUser(Users user) {
-//      this.user = user;
-//    }
+    public Users getUser() {
+      return user;
+    }
+    
+    public void setUser(Users user) {
+      this.user = user;
+    }
 
 }

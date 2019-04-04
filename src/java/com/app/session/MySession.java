@@ -19,10 +19,10 @@ public class MySession {
     return session.getAttribute("username").toString();
   }
 
-  public static String getUserId() {
+  public static String getContactID() {
     HttpSession session = getSession();
     if (session != null) {
-      return String.valueOf(session.getAttribute("userId"));
+      return String.valueOf(session.getAttribute("contactId"));
     } 
       
     return null;

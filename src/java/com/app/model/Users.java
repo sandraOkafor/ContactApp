@@ -29,9 +29,9 @@ public class Users implements Serializable {
     
     @Column(name = "password", nullable = false)
     private String password;
-//    
-//    @OneToMany(mappedBy="user", cascade=CascadeType.ALL)
-//    private Set<Contacts> myContacts = new HashSet<Contacts>();
+    
+    @OneToMany(mappedBy="user", cascade=CascadeType.ALL)
+    private Set<Contacts> myContacts = new HashSet<Contacts>();
     
     public Users() {
     
@@ -75,11 +75,11 @@ public class Users implements Serializable {
         this.password = password;
     }
 
-//    public Set<Contacts> getMyContacts() {
-//        return myContacts;
-//    }
-//
-//    public void setMyContacts(Set<Contacts> myContacts) {
-//        this.myContacts = myContacts;
-//    }
+    public Set<Contacts> getMyContacts() {
+        return myContacts;
+    }
+
+    public void setMyContacts(Set<Contacts> myContacts) {
+        this.myContacts = myContacts;
+    }
 }

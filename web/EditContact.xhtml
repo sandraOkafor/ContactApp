@@ -96,15 +96,14 @@
                                 
                                 <h:column>
                                     <f:facet name="header">Save</f:facet>
-                                    <h:commandButton value="Save" action = "#{ContactBean.save}">        
-                                  <f:setPropertyActionListener 
-                                  target = "#{ContactBean.c}" value = "#{c}" />
+                                    <h:commandButton value="Save" action = "#{contactBean.save}">        
+
                                   </h:commandButton>
                                 </h:column>
                                 
                                 <h:column>
                                     <f:facet name="header">Delete</f:facet>
-                                    <h:commandButton value="Delete" action = "#{ContactBean.delete}">        
+                                    <h:commandButton value="Delete" action = "#{contactBean.delete}">        
                                 </h:commandButton>
                                 </h:column>
                                 

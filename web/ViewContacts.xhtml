@@ -94,15 +94,16 @@
                                     <h:outputText value="#{Contacts.rship}"/>
                                 </h:column>
                                 
+                                <h:column>
+                                    <f:facet name="header">Edit</f:facet>
+                                    <h:commandButton value="Edit" action="EditContact.xhtml"/>
+                                </h:column>
                                 
                             </h:dataTable>
                         </h:form>
             <br/>  <br/>  <br/>
             
             
-             <h:commandButton value="Edit" action="EditContact.xhtml"/>
-            
-
                  
 
     </h:body>

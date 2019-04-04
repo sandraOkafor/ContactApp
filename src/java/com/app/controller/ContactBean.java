@@ -3,11 +3,13 @@ package com.app.controller;
 import com.app.model.Contacts;
 import com.app.model.Users;
 import com.app.service.ContactService;
+import com.app.session.MySession;
 import java.io.Serializable;
 import java.util.List;
 import javax.annotation.ManagedBean;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Named
@@ -28,7 +30,6 @@ public class ContactBean {
     private String addy;
     private String birthDate;
     private String rship;
-    private Object us;
     
     
     public String addContact() {
@@ -36,8 +37,8 @@ public class ContactBean {
         return "error";
       }
 
-      Contacts c = new Contacts( title, firstName, lastName, gender, phone, address, addy, birthDate, rship);
-      cs.addContact(us);
+      Contacts c = new Contacts(title, firstName, lastName, gender, phone, address, addy, birthDate, rship);
+      cs.addContact(c);
       return "Success";
     }
     
