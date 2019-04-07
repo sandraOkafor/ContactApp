@@ -37,7 +37,7 @@ public class ContactBean {
       }
 
       Contacts c = new Contacts( title, firstName, lastName, gender, phone, address, addy, birthDate, rship);
-      cs.addContact(us);
+      cs.addContact(c);
       return "Success";
     }
     

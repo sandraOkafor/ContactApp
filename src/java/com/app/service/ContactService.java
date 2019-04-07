@@ -21,9 +21,8 @@ public class ContactService {
     private Users user;
         
 
-    public void addContact(Object us) {
+    public void addContact(Contacts us) {
       final Session session = sessionFactory.getCurrentSession();
-      us = session.get(Contacts.class, user);
       session.save(us);
     }
 
